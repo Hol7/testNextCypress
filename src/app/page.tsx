@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-amber-400 h-screen w-screen flex justify-center items-center ">
+    <>
       <PaymentForm/>
       {/* <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
@@ -100,6 +100,6 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer> */}
-    </div>
+    </>
   );
 }
