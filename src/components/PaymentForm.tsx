@@ -7,9 +7,9 @@ import axios from "axios";
 import { AlertCircle, CheckCircle2 } from 'lucide-react';
 
 const paymentSchema = z.object({
-  firstname: z.string().min(1, "Le prénom est requis"),
-  lastname: z.string().min(1, "Le nom est requis"),
-  address: z.string().min(1, "L'adresse est requise"),
+  firstname: z.string().min(4, "Le prénom est requis min 4 characteres"),
+  lastname: z.string().min(4, "Le nom est requis 4 characteres"),
+  address: z.string().min(4, "L'adresse est requise"),
   email: z.string().email("Email invalide"),
   phone: z.string().refine(val => /^22901\d{8}$/.test(val), {
     message: "Le numéro de téléphone doit commencer par 22901 et contenir 11 chiffres"
